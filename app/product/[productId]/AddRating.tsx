@@ -60,14 +60,6 @@ const AddRating:FC<IAddRatingProps> = ({product, user}) => {
 
     if (!user || !product) return null
     
-    const deliveryOrder = user?.orders.some(order => order.products.find(item => item.id === product.id) && order.deliveryStatus === 'delivered')
-
-    const userReview = product?.reviews.find((review: Review) => {
-        return review.userId === user.id
-    })
-    
-    if (userReview || !deliveryOrder) return null
-
     return (
     <div className="flex flex-col gap-2 max-w-[500px]">
         <Heading title="Rate this product"/>

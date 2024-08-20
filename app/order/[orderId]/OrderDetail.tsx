@@ -83,9 +83,7 @@ const OrderDetail:FC<IOrderDetailProps> = ({order}) => {
                 <div className='justify-self-center'>QTY</div>
                 <div className='justify-self-end'>TOTAL</div>
             </div>
-            {order.products && order.products.map((item) => {
-                return <OrderItem key={item.id} item={item}/>
-            })}
+           
         </div>
     </div>
   )
