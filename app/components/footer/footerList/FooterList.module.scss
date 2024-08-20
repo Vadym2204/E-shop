@@ -1,0 +1,39 @@
+.content {
+  @apply px-5 mx-auto;
+
+  @media (min-width: 768px) {
+    @apply grid grid-cols-2 gap-8;
+  }
+
+  @media (min-width: 1024px) {
+    @apply flex flex-row justify-between;
+  }
+}
+
+.info {
+  @apply w-full mb-6 flex flex-col gap-2;
+
+  @media (min-width: 640px) and (max-width: 767px) {
+    @apply w-1/2 ;
+  }
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    @apply w-full;
+  }
+
+  @media (min-width: 1024px) {
+    @apply w-1/4;
+  }
+
+  h2 {
+    @apply font-bold text-white mb-2;
+  }
+
+  a, p {
+    @apply text-sm text-white;
+  }
+
+  .icons {
+    @apply flex items-center gap-3;
+  }
+}

@@ -1,0 +1,18 @@
+.content {
+    @apply grid grid-cols-6 gap-2 h-full max-h-[500px] min-h-[300px] sm:min-h-[400px];
+}
+    .image {
+        @apply object-contain;
+    }
+    .list {
+        @apply flex flex-col items-center justify-center gap-4 cursor-pointer border h-full max-h-[500px] min-h-[300px] sm:min-h-[400px];
+    }
+    .item {
+        @apply relative w-[80%] aspect-square rounded border-teal-300;
+    }
+    .mainImg {
+        @apply col-span-5 relative aspect-square;
+    }
+    .bigImg {
+        @apply w-full h-full object-contain max-h-[500px] min-h-[300px] sm:min-h-[400px];
+    }

@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.body {
+  @apply flex flex-col min-h-screen overflow-y-hidden;
+}
+
+.content-wrapper {
+  @apply flex-grow flex flex-col;
+}
+
+.main {
+  @apply flex-grow;
+}
+
+.productList {
+  @apply grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-8;
+}

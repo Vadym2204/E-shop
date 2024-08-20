@@ -1,0 +1,19 @@
+.itemContent {
+    @apply grid md:grid-cols-5 text-xs md:text-sm gap-4 border-t-[1.5px] border-slate-200 py-4 items-center;
+  }
+  
+  .content {
+    @apply col-span-full md:col-span-2 justify-self-start flex gap-2 md:gap-4;
+    .item {
+      @apply relative w-[70px] aspect-square;
+    }
+    .img {
+      @apply relative w-[70px] aspect-square;
+    }
+    .info {
+      @apply flex flex-col justify-between;
+    }
+    .button {
+      @apply text-slate-500 underline;
+    }
+  }

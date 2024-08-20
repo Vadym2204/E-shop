@@ -1,0 +1,16 @@
+.content {
+    @apply flex gap-4 items-center;
+    .color {
+       @apply font-semibold;
+    }
+}
+
+    .list {
+        @apply flex items-center justify-center gap-2
+    }   
+    .background {
+        @apply h-5 w-5 rounded-full border-[1.2px] border-slate-300 cursor-pointer
+    }
+    .item {
+        @apply h-8 w-8 rounded-full flex items-center justify-center
+    }

@@ -1,0 +1,21 @@
+.detail {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-12 mb-14;
+  .content {
+    @apply flex flex-col gap-1 text-slate-500 text-sm;
+  }
+  .title {
+    @apply text-3xl font-medium text-slate-700 mt-5;
+  }
+  .description {
+    @apply text-justify mt-2;
+  }
+  .info {
+    @apply flex items-center gap-2;
+  }
+  .category,.brand {
+    @apply font-semibold
+  }
+  .button {
+    @apply max-w-[300px]
+  }
+}

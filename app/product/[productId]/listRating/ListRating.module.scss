@@ -1,0 +1,23 @@
+.list {
+    @apply text-sm mt-2;
+}
+
+.item {
+    @apply max-w-[500px];
+}
+
+.content {
+    @apply flex items-center gap-3
+}
+
+.name {
+    @apply font-semibold
+}
+
+.date {
+    @apply font-light
+}
+
+.rating {
+    @apply mt-2
+}
