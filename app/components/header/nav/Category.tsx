@@ -1,5 +1,6 @@
-"use client";
+'use client';
 
+import { Suspense } from 'react';
 import { useSearchParams } from "next/dist/client/components/navigation";
 import { useRouter } from "next/navigation";
 import queryString from "query-string";
@@ -13,14 +14,22 @@ interface ICategoryProps {
 }
 
 const Category: FC<ICategoryProps> = ({ label, icon: Icon, selected }) => {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <CategoryContent label={label} icon={Icon} selected={selected} />
+    </Suspense>
+  );
+};
+
+const CategoryContent: FC<ICategoryProps> = ({ label, icon: Icon, selected }) => {
   const router = useRouter();
   const params = useSearchParams();
+
   const handleClick = useCallback(() => {
     if (label === "All") {
       router.push("/");
     } else {
       let currentQuery = {};
-
       if (params) {
         currentQuery = queryString.parse(params.toString());
       }
@@ -43,6 +52,7 @@ const Category: FC<ICategoryProps> = ({ label, icon: Icon, selected }) => {
       router.push(url);
     }
   }, [label, params, router]);
+
   return (
     <div
       onClick={handleClick}
